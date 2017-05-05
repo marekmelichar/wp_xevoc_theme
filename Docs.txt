@@ -1,0 +1,18 @@
+PLUGINS : 
+
+Post Types Order
+tinyPNG
+WP Super Cache
+Autoptimize
+
+Smooth scroll =>
+	1. Appearance / Menus / Custom Links => URL : #name_of_destination, Link Text : link_text
+	2. Post / some post / Custom fields / Name : smooth_scroll_id , Value : some ID
+	3. Sections / some section / Custom fields / Name : smooth_scroll_id , Value : some ID
+
+Add new Section =>
+	1. Go to Sections in Dashboard
+	2. Add new section	
+
+Add custom class for special styles =>
+	1. Sections / some section / Custom fields / Name : custom_class_name , Values : [ gray-bg, blue-bg, green-bg, padding-2em ]

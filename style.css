@@ -1,0 +1,308 @@
+/*
+Theme Name: XEVOC theme
+Theme URI: ...........
+Author: Marek Melichar
+Author URI: marekmelichar.cz
+Description: Theme for xroom
+Version: 1.0
+*/
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'open_sansregular', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: 'open_sansregular',sans-serif;
+  font-size: 2em;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.logo img {
+  max-width: 250px;
+  width: 100%;
+}
+
+.main-menu ul {  
+  list-style-type: none;
+  margin: 0;
+  padding: 0; 
+  text-align: justify;
+  margin-top: 28px;
+}
+
+.main-menu ul:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+}
+
+.main-menu ul li {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  vertical-align: top;
+}
+
+.main-menu ul li a {
+    font-family: 'open_sansregular',sans-serif;
+    color: #3d3d3d;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: .05em;
+}
+
+header {
+  width: 100%;
+  background-color: #fff;
+  z-index: 9;
+  border-bottom: 1px solid #bbb;
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+}
+
+header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.customize-support header {
+  top: 32px;
+}
+
+.banner {
+  padding: 2em 0;
+  text-align: center;
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner .heading {
+  margin-bottom: 1em;
+  color: #153242;
+}
+
+.banner a {
+  padding: 0.75em 2em;
+  border: 1px solid #153242;
+  background-color: #153242;
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.banner p {
+  margin-top: 50px;
+}
+
+article {
+  padding: 4em 0;
+  font-family: 'open_sanslight',sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+article h1 {
+  text-align: center;
+  font-family: 'open_sansregular',sans-serif;
+  font-size: 2em;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+}
+
+.main-menu ul {  
+  list-style-type: none;
+  margin: 0;
+  padding: 0; 
+  text-align: justify;
+  margin-top: 28px;
+}
+
+.main-menu ul:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+}
+
+.main-menu ul li {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  vertical-align: top;
+}
+
+.main-menu ul li a {
+    font-family: 'open_sansregular',sans-serif;
+    color: #3d3d3d;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: .05em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gray-bg {
+  background-color: #F4F5F7;
+}
+
+.blue-bg {
+	background-color: #153242;
+  color: #fff;
+}
+
+.green-bg {
+	background-color: #7CB518;
+  color: #fff;
+}
+
+.padding-2em {
+	padding: 2em;
+}
+
+.font-light {
+  font-family: 'open_sanslight',sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 767px) and (max-width: 768px) {
+
+  .customize-support header {
+    top: 32px;
+  }
+
+  .customize-support header.fixed {
+    top: 44px;
+  }
+
+}
+
+
+@media screen and (max-width: 767px) {
+  .logo-wrap {
+    margin-top: 16px;
+    float: left;
+  }
+
+  .main-menu ul {
+    width: 55%;
+    float: right;
+    margin-top: 22px;
+  }
+
+  .customize-support header.fixed {
+    top: 0;
+  }
+
+  .logo img {
+    max-width: 125px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .logo-wrap {
+    margin-top: 5px;
+    float: none;
+    text-align: center;
+  }
+
+  .main-menu ul {
+    width: 100%;
+    float: right;
+    margin-top: 0;
+    margin-bottom: -16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
