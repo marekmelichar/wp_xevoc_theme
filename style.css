@@ -125,6 +125,20 @@ article h1 {
   margin-bottom: 0.5em;
 }
 
+article p {
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+article img {
+  max-width: 650px;
+  width: 100%;
+  margin: 25px auto 0 auto;
+  height: auto;
+}
+
 .main-menu ul {  
   list-style-type: none;
   margin: 0;
@@ -156,9 +170,75 @@ article h1 {
     letter-spacing: .05em;
 }
 
+.spec-img {
+  width: 20%;
+  float: left;  
+}
 
+.spec-title,
+.spec-list {
+  width: 80%;
+  float: left;
+  text-align: left;
+  padding-left: 10px;
+}
 
+.spec-title {
+  margin-top: 30px;
+}
 
+.spec-list {
+  margin-top: 15px;
+}
+
+.safety { 
+  padding-left: 30px;
+}
+
+.customization {
+  padding-left: 30px;
+}
+
+.price-box {
+  font-family: 'open_sansregular',sans-serif;
+  font-size: 1em;
+
+}
+
+.price-box .heading {
+  font-family: 'open_sansbold',sans-serif;
+  background-color: #153242;
+  color: #fff;
+  padding: 20px;
+  font-size: 1.75em;
+}
+
+.price-body {
+  background-color: #EBEBEB;
+  text-align: left;
+}
+
+.price-features-list {
+  padding: 30px;
+  line-height: 2;
+}
+
+.price-amount {
+  text-align: center;
+  font-family: 'open_sansbold',sans-serif;
+  font-size: 2.5em;
+}
+
+.price-period {
+  text-align: center;
+  font-family: 'open_sanslight',sans-serif;
+  font-size: 1.25em;
+}
+
+.price-button {
+  text-align: center;
+  
+}
 
 
 

@@ -75,14 +75,14 @@ get_header() ?>
 
 							</div>
 
-							<div class="row">
+							<div class="row margin-top-2">
 
 							<?php if(get_post_meta($post->ID, 'spec_service_img', true) || 
 							 get_post_meta($post->ID, 'spec_service_title', true) || 
 							 get_post_meta($post->ID, 'spec_service_list', true)
 							 ): ?>
 									<div class="column size_50">
-										<div class="spec-img technical-features">
+										<div class="spec-img service">
 											<img src="<?php echo get_post_field('spec_service_img'); ?>" />	
 										</div>
 										<div class="spec-title">
@@ -99,7 +99,7 @@ get_header() ?>
 							 get_post_meta($post->ID, 'spec_customization_list', true)
 							 ): ?>
 									<div class="column size_50">
-										<div class="spec-img safety">
+										<div class="spec-img customization">
 											<img src="<?php echo get_post_field('spec_customization_img'); ?>" />	
 										</div>
 										<div class="spec-title">
@@ -108,6 +108,36 @@ get_header() ?>
 										<div class="spec-list">
 											<?php echo get_post_field('spec_customization_list'); ?>	
 										</div>
+									</div>
+							<?php endif; ?>
+
+							<?php if(get_post_meta($post->ID, 'price_column1_title', true) || get_post_meta($post->ID, 'price_column1_list', true) || get_post_meta($post->ID, 'price_column1_price', true) || get_post_meta($post->ID, 'price_column1_periodically', true) || get_post_meta($post->ID, 'price_column1_button_text', true) || get_post_meta($post->ID, 'price_column1_button_color', true) || get_post_meta($post->ID, 'price_column1_button_color', true)
+							 ): ?>
+									<div class="column size_33">
+										<div class="price-box">
+											<h2 class="heading">
+												<?php echo get_post_field('price_column1_title'); ?>
+											</h2>
+											<div class="price-body">
+												<div class="price-features-list"><?php echo get_post_field('price_column1_list'); ?></div>
+												<div class="price-amount">
+													<?php echo get_post_field('price_column1_price'); ?>	
+												</div>
+													<div class="price-period"><?php echo get_post_field('price_column1_periodically'); ?>	
+												</div>
+												<div>
+													<a href="<?php echo get_post_field('price_column1_link_target'); ?>" class="price-button <?php echo get_post_field('price_column1_button_color'); ?>">
+														<?php echo get_post_field('price_column1_button_text'); ?>
+													</a>
+												</div>
+											</div>
+										</div>
+										
+											
+										
+										
+											
+										
 									</div>
 							<?php endif; ?>
 
