@@ -21,9 +21,9 @@ function custom_setup()
 	 * Menus
 	 */
 	register_nav_menus(array(
-		'primary' => 'Primary Menu',
-		'categories' => 'Category Menu',
-		'footer' => 'Footer Menu'
+		'primary' => 'Primary Menu'
+		// 'categories' => 'Category Menu',
+		// 'footer' => 'Footer Menu'
 	));
 
 

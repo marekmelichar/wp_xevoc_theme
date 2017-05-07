@@ -254,7 +254,21 @@ article img {
   padding: 20px;
 }
 
+.get-in-touch-body {
+  font-size: 1.5em;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
 
+.get-in-touch-footer {
+  margin-top: 60px;
+}
+
+.get-in-touch-button {
+  padding: 20px 40px;
+  font-size: 1.5em;
+}
 
 
 

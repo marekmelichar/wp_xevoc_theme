@@ -30,7 +30,7 @@ get_header() ?>
 			
 			<?php endif; ?>
 			
-			<?php if (get_post_type( get_the_ID() ) == 'section' ) : ?>
+			<?php if (get_post_type( get_the_ID() ) == 'section' && !get_post_meta($post->ID, 'section_without_title', true) ) : ?>
 				<div class="<?php echo get_post_field('row_bg_color'); ?>">
 					<div class="row">
 						<div class="column size_100">
@@ -202,9 +202,6 @@ get_header() ?>
 
 								</div>
 
-								
-								
-
 							</article>	
 						</div>
 					</div>
@@ -212,9 +209,39 @@ get_header() ?>
 
 			<?php endif ?>	
 
+			<!-- if GET IN TOUCH SECTION -->
+			<?php if ( get_post_meta($post->ID, 'section_without_title', true) || get_post_meta($post->ID, 'section_without_title_button_target', true) || get_post_meta($post->ID, 'section_without_title_button_color', true) || get_post_meta($post->ID, 'section_without_title_button_color', true) ) : ?>
+			
+			<div class="<?php echo get_post_field('row_bg_color'); ?>">
+				<div class="row">
+					<div class="column size_100">
+						<article id="<?php echo get_post_field('smooth_scroll_id'); ?>">
+							<?php the_content() ?>
+							<?php the_post_thumbnail( 'full', array( 'class' => 'section-img' ) ) ?>
+
+							<div class="get-in-touch">
+								<div class="get-in-touch-body">
+									<?php echo get_post_field('section_without_title'); ?>
+								</div>
+								<div class="get-in-touch-footer">
+									<a href="<?php echo get_post_field('section_without_title_button_target'); ?>" class="get-in-touch-button <?php echo get_post_field('section_without_title_button_color'); ?>">
+											<?php echo get_post_field('section_without_title_button_text'); ?>
+										</a>
+								</div>
+							</div>
+
+						</article>
+					</div>
+				</div>	
+			</div>	
+
+			<?php endif; ?>
+
 			
 
 		<?php endwhile ?>
+	
+	
 	<?php else : ?>	
 
 		<?php _e('no sections :(', 'sections') ?>

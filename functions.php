@@ -18,22 +18,6 @@ require_once THEME_DIRECTORY . '/inc/enqueue-scripts.php';
 require_once THEME_DIRECTORY . '/inc/cleanup-reorder.php';
 
 /**
- * Modifications of WP Queries
- */
-// require_once THEME_DIRECTORY . '/inc/wp-queries.php';
-
-/**
- * other helpful functions
- */
-// require_once THEME_DIRECTORY . '/inc/theme-options-page.php';
-
-/**
- * Hide the main content editor if not necessary
- */
-// require_once THEME_DIRECTORY . '/inc/hide-the-editor.php';
-// 
-
-/**
  * Custom Post Types
  */
 require_once THEME_DIRECTORY . '/inc/CPT-banner.php';
