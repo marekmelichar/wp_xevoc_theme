@@ -163,11 +163,12 @@ article img {
 }
 
 .main-menu ul li a {
-    font-family: 'open_sansregular',sans-serif;
-    color: #3d3d3d;
-    display: inline-block;
-    text-decoration: none;
-    letter-spacing: .05em;
+  font-family: 'open_sansregular',sans-serif;
+  color: #3d3d3d;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  font-size: 1.25em;
 }
 
 .spec-img {

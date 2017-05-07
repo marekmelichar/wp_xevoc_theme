@@ -1,8 +1,9 @@
-			<!-- </div> -->
-		<!-- </div> -->
+
+
+
 	</main>
 	<footer class="container-fluid footer">
-		<div class="row flex">
+		<div class="row">
 			<!-- <div class="container size_50">
 				<p>
 					&copy; <?php echo get_theme_mod('copy_by'); ?>
