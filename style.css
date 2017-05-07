@@ -237,7 +237,20 @@ article img {
 
 .price-button {
   text-align: center;
-  
+  width: 100%;
+  display: block;
+  padding: 25px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.price-button:hover {
+  background: #5b8611;
+}
+
+.price-footer {
+  background-color: #EBEBEB;
+  padding: 20px;
 }
 
 

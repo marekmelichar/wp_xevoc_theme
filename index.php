@@ -36,13 +36,14 @@ get_header() ?>
 							<h1 class="<?php echo get_post_field('h1_custom_classes'); ?>"><?php the_title() ?></h1>
 							<?php the_content() ?>
 							<?php the_post_thumbnail( 'full', array( 'class' => 'section-img' ) ) ?>
-							
-							<div class="row">
 
+
+						<!-- In case of SPEC section -->
 							<?php if(get_post_meta($post->ID, 'spec_technical_features_img', true) || 
 							 get_post_meta($post->ID, 'spec_technical_features_title', true) || 
 							 get_post_meta($post->ID, 'spec_technical_features_list', true)
 							 ): ?>
+							 	<div class="row">
 									<div class="column size_50">
 										<div class="spec-img technical-features">
 											<img src="<?php echo get_post_field('spec_technical_features_img'); ?>" />	
@@ -71,16 +72,14 @@ get_header() ?>
 											<?php echo get_post_field('spec_safety_list'); ?>	
 										</div>
 									</div>
+								</div>
 							<?php endif; ?>
-
-							</div>
-
-							<div class="row margin-top-2">
-
+						
 							<?php if(get_post_meta($post->ID, 'spec_service_img', true) || 
 							 get_post_meta($post->ID, 'spec_service_title', true) || 
 							 get_post_meta($post->ID, 'spec_service_list', true)
 							 ): ?>
+							 	<div class="row margin-top-2">
 									<div class="column size_50">
 										<div class="spec-img service">
 											<img src="<?php echo get_post_field('spec_service_img'); ?>" />	
@@ -109,15 +108,22 @@ get_header() ?>
 											<?php echo get_post_field('spec_customization_list'); ?>	
 										</div>
 									</div>
+								</div>
 							<?php endif; ?>
 
-							<?php if(get_post_meta($post->ID, 'price_column1_title', true) || get_post_meta($post->ID, 'price_column1_list', true) || get_post_meta($post->ID, 'price_column1_price', true) || get_post_meta($post->ID, 'price_column1_periodically', true) || get_post_meta($post->ID, 'price_column1_button_text', true) || get_post_meta($post->ID, 'price_column1_button_color', true) || get_post_meta($post->ID, 'price_column1_button_color', true)
+
+							
+							<!-- In case of PRICES section -->
+								<?php if(get_post_meta($post->ID, 'price_column1_title', true) || get_post_meta($post->ID, 'price_column1_list', true) || get_post_meta($post->ID, 'price_column1_price', true) || get_post_meta($post->ID, 'price_column1_periodically', true) || get_post_meta($post->ID, 'price_column1_button_text', true) || get_post_meta($post->ID, 'price_column1_button_color', true) || get_post_meta($post->ID, 'price_column1_button_color', true)
 							 ): ?>
+							 	<div class="row">
 									<div class="column size_33">
 										<div class="price-box">
-											<h2 class="heading">
-												<?php echo get_post_field('price_column1_title'); ?>
-											</h2>
+											<div class="price-header">
+												<h2 class="heading">
+													<?php echo get_post_field('price_column1_title'); ?>
+												</h2>
+											</div>	
 											<div class="price-body">
 												<div class="price-features-list"><?php echo get_post_field('price_column1_list'); ?></div>
 												<div class="price-amount">
@@ -125,23 +131,17 @@ get_header() ?>
 												</div>
 													<div class="price-period"><?php echo get_post_field('price_column1_periodically'); ?>	
 												</div>
-												<div>
-													<a href="<?php echo get_post_field('price_column1_link_target'); ?>" class="price-button <?php echo get_post_field('price_column1_button_color'); ?>">
-														<?php echo get_post_field('price_column1_button_text'); ?>
-													</a>
-												</div>
+											</div>
+											<div class="price-footer">
+												<a href="<?php echo get_post_field('price_column1_link_target'); ?>" class="price-button <?php echo get_post_field('price_column1_button_color'); ?>">
+													<?php echo get_post_field('price_column1_button_text'); ?>
+												</a>
 											</div>
 										</div>
-										
-											
-										
-										
-											
-										
 									</div>
+								</div>
 							<?php endif; ?>
-
-							</div>
+							
 
 						</article>	
 					</div>
