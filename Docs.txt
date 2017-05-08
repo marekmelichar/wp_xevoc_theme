@@ -1,9 +1,9 @@
 PLUGINS : 
 
 Post Types Order
-tinyPNG
+tinyPNG - vyzaduje API KEY
 WP Super Cache
-Autoptimize
+Autoptimize, jedine s work-aroundem na navigaci
 
 Every element is able to have:
 
@@ -17,3 +17,8 @@ Add new Section =>
 
 Add custom class for background color =>
 	1. Sections / some section / Custom fields / Name : row_bg_color , Values : [ gray-bg, blue-bg, green-bg, padding-2em ]
+
+
+Editor webu:
+guest
+Xevoc@Editor%2017	
