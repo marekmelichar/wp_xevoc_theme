@@ -24,6 +24,10 @@ h1 {
   line-height: 1.5;
 }
 
+.logo-wrap {
+  padding-top: 5px;
+}
+
 .logo img {
   max-width: 250px;
   width: 100%;
@@ -95,12 +99,19 @@ header.fixed {
 }
 
 .banner a {
-  padding: 0.75em 2em;
-  border: 1px solid #153242;
+  padding: 20px 40px;
+  font-size: 1.5em;
+
+  /*padding: 0.75em 2em;*/
+  /*border: 1px solid #153242;*/
   background-color: #153242;
   color: #fff;
   font-size: 1em;
   text-decoration: none;
+}
+
+.banner a:hover {
+  background-color: #0b1a23;
 }
 
 .banner p {
@@ -270,6 +281,21 @@ article img {
   font-size: 1.5em;
 }
 
+footer {
+  padding: 30px;
+  text-align: center;
+}
+
+.footer-logo img {
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+}
+
+footer h2 {
+  font-size: 1.5em;
+}
+
 
 
 
@@ -301,7 +327,11 @@ article img {
   font-family: 'open_sanslight',sans-serif;
 }
 
-
+a.green-bg:hover,
+.green-bg a:hover,
+.green-bg button:hover {
+  background-color: #70a217;
+}
 
 
 
@@ -327,6 +357,12 @@ article img {
     top: 44px;
   }
 
+
+
+  .main-menu {
+    width: 50%;
+  }
+
 }
 
 
@@ -349,9 +385,30 @@ article img {
   .logo img {
     max-width: 125px;
   }
+
+  .spec-title, .spec-list {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-left: 10px;
+  }
+
+  .spec-img {
+    width: 20%;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .spec-title {
+    font-size: 2em;
+  }
+
+  .price-box {
+    margin-top: 2em;
+  }
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 451px) {
   .logo-wrap {
     margin-top: 5px;
     float: none;
@@ -363,6 +420,22 @@ article img {
     float: right;
     margin-top: 0;
     margin-bottom: -16px;
+  }
+
+  .spec-img {
+    width: 25%;
+    float: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .spec-img {
+    width: 40%;
+    float: none;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 

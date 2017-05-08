@@ -18,7 +18,7 @@ get_header() ?>
 				<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 				<!-- <div> -->
 					<div class="banner" style="background-image: url('<?php echo $thumb[0]; ?>')">
-						<div class="row">
+						<div class="row <?php echo get_post_field('row_class'); ?>">
 							<div class="column size_100">
 								<article>
 									<h1 class="heading"><?php the_title() ?></h1>
@@ -32,10 +32,10 @@ get_header() ?>
 			
 			<?php if (get_post_type( get_the_ID() ) == 'section' && !get_post_meta($post->ID, 'section_without_title', true) ) : ?>
 				<div class="<?php echo get_post_field('row_bg_color'); ?>">
-					<div class="row">
+					<div class="row <?php echo get_post_field('row_class'); ?>">
 						<div class="column size_100">
 							<article id="<?php echo get_post_field('smooth_scroll_id'); ?>">
-								<h1 class="<?php echo get_post_field('h1_custom_classes'); ?>"><?php the_title() ?></h1>
+								<h1 class="<?php echo get_post_field('heading_class'); ?>"><?php the_title() ?></h1>
 								<?php the_content() ?>
 								<?php the_post_thumbnail( 'full', array( 'class' => 'section-img' ) ) ?>
 
@@ -45,7 +45,7 @@ get_header() ?>
 								 get_post_meta($post->ID, 'spec_technical_features_title', true) || 
 								 get_post_meta($post->ID, 'spec_technical_features_list', true)
 								 ): ?>
-								 	<div class="row">
+								 	<div class="row <?php echo get_post_field('row_class'); ?>">
 										<div class="column size_50">
 											<div class="spec-img technical-features">
 												<img src="<?php echo get_post_field('spec_technical_features_img'); ?>" />	
@@ -81,7 +81,7 @@ get_header() ?>
 								 get_post_meta($post->ID, 'spec_service_title', true) || 
 								 get_post_meta($post->ID, 'spec_service_list', true)
 								 ): ?>
-								 	<div class="row margin-top-2">
+								 	<div class="row <?php echo get_post_field('row_class'); ?>">
 										<div class="column size_50">
 											<div class="spec-img service">
 												<img src="<?php echo get_post_field('spec_service_img'); ?>" />	
@@ -117,7 +117,8 @@ get_header() ?>
 								
 								<!-- In case of PRICES section -->
 
-								<div class="row margin-top-2">
+								<!-- <div class="row margin-top-2"> -->
+								<div class="row <?php echo get_post_field('row_class'); ?>">
 
 									<!-- PRICE BOX 1 -->
 									<?php if(get_post_meta($post->ID, 'price_column1_title', true) || get_post_meta($post->ID, 'price_column1_list', true) || get_post_meta($post->ID, 'price_column1_price', true) || get_post_meta($post->ID, 'price_column1_periodically', true) || get_post_meta($post->ID, 'price_column1_link_target', true) || get_post_meta($post->ID, 'price_column1_button_color', true) || get_post_meta($post->ID, 'price_column1_button_text', true)
@@ -213,7 +214,7 @@ get_header() ?>
 			<?php if ( get_post_meta($post->ID, 'section_without_title', true) || get_post_meta($post->ID, 'section_without_title_button_target', true) || get_post_meta($post->ID, 'section_without_title_button_color', true) || get_post_meta($post->ID, 'section_without_title_button_color', true) ) : ?>
 			
 			<div class="<?php echo get_post_field('row_bg_color'); ?>">
-				<div class="row">
+				<div class="row <?php echo get_post_field('row_class'); ?>">
 					<div class="column size_100">
 						<article id="<?php echo get_post_field('smooth_scroll_id'); ?>">
 							<?php the_content() ?>

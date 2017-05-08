@@ -115,6 +115,7 @@ function xroom_custom_menu_order( $__return_true )
 		//'edit.php?post_type=page', // Pages
 		'edit.php?post_type=banner', // Banners
 		'edit.php?post_type=section', // Sections
+		'edit.php?post_type=footer', // Footer
 		//'edit.php', // Posts
 		'upload.php', // Media
 		'themes.php', // Appearance

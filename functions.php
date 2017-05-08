@@ -20,6 +20,7 @@ require_once THEME_DIRECTORY . '/inc/cleanup-reorder.php';
 /**
  * Custom Post Types
  */
+require_once THEME_DIRECTORY . '/inc/CPT-footer.php';
 require_once THEME_DIRECTORY . '/inc/CPT-banner.php';
 require_once THEME_DIRECTORY . '/inc/CPT-section.php';
 require_once THEME_DIRECTORY . '/inc/CPT-modify-main-query.php';
