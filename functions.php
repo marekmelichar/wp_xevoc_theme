@@ -18,6 +18,11 @@ require_once THEME_DIRECTORY . '/inc/enqueue-scripts.php';
 require_once THEME_DIRECTORY . '/inc/cleanup-reorder.php';
 
 /**
+ * Customizer
+ */
+require_once THEME_DIRECTORY . '/inc/customizer.php';
+
+/**
  * Custom Post Types
  */
 require_once THEME_DIRECTORY . '/inc/CPT-footer.php';
