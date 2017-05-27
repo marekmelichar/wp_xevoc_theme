@@ -20,9 +20,9 @@
 	} // end stickyUtility function
 
 	// run on page load
-	stickyUtility();  	
+	stickyUtility();
 
-	
+
 
 
 // ------------------------- animace HEADER ---------------------------------
@@ -65,14 +65,14 @@ $(function() {
 
 // ------------------------- SMOOTH SCROLL UP ON LOGO CLICK ---------------------------------
 
-	var logo = $('.logo');
-
-	logo.on('click', function(event) {
-		event.preventDefault();
-		$('html,body').animate({ scrollTop: 0 });
- 	});
-
-
+	// var logo = $('.logo');
+	//
+	// logo.on('click', function(event) {
+	// 	event.preventDefault();
+	// 	$('html,body').animate({ scrollTop: 0 });
+ // 	});
 
 
-})(jQuery);	
+
+
+})(jQuery);

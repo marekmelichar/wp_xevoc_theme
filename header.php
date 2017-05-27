@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$custom_logo_id = get_theme_mod( 'custom_logo' );
 	$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 ?>
@@ -23,7 +23,7 @@
 						</div>
 						<div class="column size_33"></div>
 						<div class="column size_33 main-menu">
-							
+
 							<?php wp_nav_menu( array(
 									'theme_location'  => 'primary',
 									'menu_class'      => 'primary-menu-list',

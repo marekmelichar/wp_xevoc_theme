@@ -23,6 +23,11 @@ require_once THEME_DIRECTORY . '/inc/cleanup-reorder.php';
 require_once THEME_DIRECTORY . '/inc/customizer.php';
 
 /**
+ * Shortcodes
+ */
+require_once THEME_DIRECTORY . '/inc/shortcodes.php';
+
+/**
  * Custom Post Types
  */
 require_once THEME_DIRECTORY . '/inc/CPT-footer.php';
