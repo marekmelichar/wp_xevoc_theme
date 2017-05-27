@@ -3,8 +3,8 @@
 /**
  * Customizer
  */
-add_action( 'customize_register', 'muzli_customize_register' );
-function muzli_customize_register( $wp_customize )
+add_action( 'customize_register', 'xevoc_customize_register' );
+function xevoc_customize_register( $wp_customize )
 {
 	$wp_customize->add_section('copyright', array(
 		'title'    => 'Copyright',
@@ -53,24 +53,10 @@ function muzli_customize_register( $wp_customize )
 		'label'    => 'Copyright text',
 	) );
 
-	// $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'footer_logo',
-  //          array(
-  //              'label'      => __( 'Upload a logo', 'theme_name' ),
-  //              'section'    => 'copyright',
-  //              'settings'   => 'muzli_customize_register',
-  //              'context'    => 'your_setting_context' 
-  //          )
-  //      )
-  //  );
-
 	 $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'footer_logo', array(
     'label'    => __( 'Logo', 'themeslug' ),
     'section'  => 'copyright',
     'settings' => 'footer_logo',
 		) ) );
-
-
-
-
 
 }

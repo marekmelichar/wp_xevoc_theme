@@ -14,7 +14,9 @@ get_header() ?>
 						<?php the_post_thumbnail( 'full', array( 'class' => 'contact-img' ) ) ?>
 						<?php the_content() ?>
 					</div>
-					<div class="column size_40"></div>
+					<div class="column size_40">
+						<?php echo do_shortcode( get_post_meta( get_the_id(), 'contact_form', true ) ); ?>
+					</div>
 				</div>
 			</div>
 		<?php endwhile ?>
