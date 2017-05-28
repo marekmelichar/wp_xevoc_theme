@@ -14,7 +14,7 @@ function default_theme_scripts()
 		// 'default-what-input', get_template_directory_uri() . '/js/vendor/what-input.js'
 	// );
 
-	wp_enqueue_script( 'nav-js', get_template_directory_uri() . '/js/nav.js', array( 'jquery' ), '', true );
+	// wp_enqueue_script( 'nav-js', get_template_directory_uri() . '/js/nav.js', array( 'jquery' ), '', true );
 	// wp_enqueue_script( 'slider-js', get_template_directory_uri() . '/js/slider.js', array( 'jquery' ), '', true );
 	// wp_enqueue_script( 'mobile-menu-js', get_template_directory_uri() . '/js/mobile_menu.js', array( 'jquery' ), '', true );
 	// 
@@ -23,6 +23,8 @@ function default_theme_scripts()
 	wp_enqueue_script( 'nav-js', get_template_directory_uri() . '/js/nav.js', array( 'jquery' ), '', true );
 
 	wp_enqueue_script( 'equal-height-js', get_template_directory_uri() . '/js/equal-height.js', array( 'jquery' ), '', true );
+
+	wp_enqueue_script( 'slideshow-js', get_template_directory_uri() . '/js/slideshow.js', array( 'jquery' ), '', true );
 
 	wp_enqueue_style(
 		'default-animations', get_template_directory_uri() . '/css/animate.css'

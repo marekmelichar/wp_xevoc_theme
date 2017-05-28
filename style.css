@@ -223,15 +223,24 @@ header.fixed {
 .banner {
   padding: 2em 0;
   text-align: center;
-  height: 750px;
+  min-height: 750px;
+  height: auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  /* for slideshow */
+  position: relative;
 }
 
 .banner .heading {
   margin-bottom: 1em;
   color: #153242;
+
+  /* for slideshow */
+  z-index: 1;
+  position: relative;
+  display: none;
 }
 
 .banner a {
@@ -247,11 +256,16 @@ header.fixed {
 }
 
 .banner a:hover {
-  background-color: #0b1a23;
+  background-color: #0b1a23; 
 }
 
 .banner p {
   margin-top: 50px;
+
+  /* for slideshow */
+  z-index: 1;
+  position: relative;
+  display: none;
 }
 
 article {
@@ -528,6 +542,38 @@ footer h2 {
   color: #fff;
   padding: 20px 40px;
 }
+
+.banner article {
+  padding: 0;
+}
+
+.banner article img {
+  margin: 0;
+}
+
+.slideshow {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slideshow .slide {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+}
+
+.slideshow .slide img {
+  max-width: 100%;
+  width: 100%;
+}
+
+
+
+
+
 
 
 
