@@ -6,9 +6,9 @@
   slideshow.children(':not(:last)').hide()
 
   slides.on('click', function(){
-    slideshow.children(':last').fadeOut(1500, function(){
+    slideshow.children(':last').fadeOut(600, function(){
       $(this).prependTo( slideshow )
-    }).prev().fadeIn(1500)
+    }).prev().fadeIn(600)
   })
 
 })(jQuery);

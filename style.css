@@ -256,7 +256,7 @@ header.fixed {
 }
 
 .banner a:hover {
-  background-color: #0b1a23; 
+  background-color: #0b1a23;
 }
 
 .banner p {
@@ -552,9 +552,15 @@ footer h2 {
 }
 
 .slideshow {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
+  background-image: url('images/frame.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 1159px;
+  height: 711px;
 }
 
 .slideshow .slide {
@@ -566,10 +572,18 @@ footer h2 {
 }
 
 .slideshow .slide img {
-  max-width: 100%;
-  width: 100%;
+  /*max-width: 100%;*/
+  /*width: 100%;*/
+
+  max-width: 2000px;
+  width: 933px;
+  margin: 65px 0 0 -14px;
+
 }
 
+#how_it_works {
+  padding: 6em 0 1em 0;
+}
 
 
 
