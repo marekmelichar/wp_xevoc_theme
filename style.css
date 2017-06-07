@@ -667,6 +667,25 @@ a.green-bg:hover,
     width: 50%;
   }
 
+
+  .slideshow {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    background-image: url(images/frame.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 600px;
+    height: 378px;
+  }
+
+  .slideshow .slide img {
+    max-width: 2000px;
+    width: 496px;
+    margin: 35px 0 0 1px;
+  }  
+
 }
 
 
