@@ -551,38 +551,19 @@ footer h2 {
   margin: 0;
 }
 
-.slideshow {
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-  background-image: url('images/frame.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 1159px;
-  height: 711px;
-}
-
-.slideshow .slide {
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 900px;
-}
-
-.slideshow .slide img {
-  /*max-width: 100%;*/
-  /*width: 100%;*/
-
-  max-width: 2000px;
-  width: 933px;
-  margin: 65px 0 0 -14px;
-
-}
-
 #how_it_works {
   padding: 6em 0 1em 0;
+}
+
+#demo {
+  width: 50%;
+  float: left;
+}
+
+#calculator {
+  width: 50%;
+  float: left;
+  padding: 0 0 0 50px;
 }
 
 
@@ -668,23 +649,7 @@ a.green-bg:hover,
   }
 
 
-  .slideshow {
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-    background-image: url(images/frame.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 600px;
-    height: 378px;
-  }
 
-  .slideshow .slide img {
-    max-width: 2000px;
-    width: 496px;
-    margin: 35px 0 0 1px;
-  }  
 
 }
 

@@ -25,7 +25,7 @@ require_once THEME_DIRECTORY . '/inc/customizer.php';
 /**
  * Shortcodes
  */
-require_once THEME_DIRECTORY . '/inc/shortcodes.php';
+// require_once THEME_DIRECTORY . '/inc/shortcodes.php';
 
 /**
  * Custom Post Types

@@ -1,17 +1,17 @@
-(function($){
-
-  var slideshow = $('.slideshow'),
-      slides = $('.slide')
-
-  slideshow.children(':not(:last)').hide()
-
-  slides.on('click', function(){
-    slideshow.children(':last').fadeOut(600, function(){
-      $(this).prependTo( slideshow )
-    }).prev().fadeIn(600)
-  })
-
-})(jQuery);
+// (function($){
+//
+//   var slideshow = $('.slideshow'),
+//       slides = $('.slide')
+//
+//   slideshow.children(':not(:last)').hide()
+//
+//   slides.on('click', function(){
+//     slideshow.children(':last').fadeOut(600, function(){
+//       $(this).prependTo( slideshow )
+//     }).prev().fadeIn(600)
+//   })
+//
+// })(jQuery);
 
 
 
