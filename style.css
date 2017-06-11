@@ -694,6 +694,14 @@ a.green-bg:hover,
   .price-box {
     margin-top: 2em;
   }
+
+  #demo {
+    width: 100%;
+  }
+
+  #calculator {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 451px) {
