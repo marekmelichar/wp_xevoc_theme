@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 add_action('init', 'section_custom_post_type');
 
@@ -30,7 +30,7 @@ function section_custom_post_type()
         'items_list_navigation' => _x( 'Sections list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'textdomain' ),
         'items_list'            => _x( 'Sections list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'textdomain' ),
     );
- 
+
     $args = array(
         'labels'             => $labels,
         'public'             => true,
@@ -46,10 +46,6 @@ function section_custom_post_type()
         'menu_icon'					 => 'dashicons-align-center',
         'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
     );
- 
+
     register_post_type( 'Section', $args );
 }
-
-
-
-

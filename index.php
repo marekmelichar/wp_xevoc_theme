@@ -4,32 +4,23 @@ get_header() ?>
 
 	<?php if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) : the_post() ?>
-			<?php //bd_parse_post_variables() ?>
-			<?php '<pre>'; ?>
-			<?php //echo $post_var ?>
-			<?php //echo $post_images and $post_images_label ?>
-			<?php //echo $post_links and $post_links_label ?>
-			<?php //echo $post_files and $post_files_label ?>
-			<?php //echo get_post_meta( get_the_ID(), '_custom_field', true ) ?>
-			<?php '</pre>'; ?>
 
 			<?php if (get_post_type( get_the_ID() ) == 'banner' ) : ?>
-				
+
 				<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-				<!-- <div> -->
 					<div class="banner" style="background-image: url('<?php echo $thumb[0]; ?>')">
 						<div class="row <?php echo get_post_field('row_class'); ?>">
 							<div class="column size_100">
 								<article>
 									<h1 class="heading"><?php the_title() ?></h1>
 									<?php the_content() ?>
-								</article>	
+								</article>
 							</div>
-						</div>	
-					</div>	
-			
+						</div>
+					</div>
+
 			<?php endif; ?>
-			
+
 			<?php if (get_post_type( get_the_ID() ) == 'section' && !get_post_meta($post->ID, 'section_without_title', true) ) : ?>
 				<div class="<?php echo get_post_field('row_bg_color'); ?>">
 					<div class="row <?php echo get_post_field('row_class'); ?>">
@@ -41,80 +32,80 @@ get_header() ?>
 
 
 							<!-- In case of SPEC section -->
-								<?php if(get_post_meta($post->ID, 'spec_technical_features_img', true) || 
-								 get_post_meta($post->ID, 'spec_technical_features_title', true) || 
+								<?php if(get_post_meta($post->ID, 'spec_technical_features_img', true) ||
+								 get_post_meta($post->ID, 'spec_technical_features_title', true) ||
 								 get_post_meta($post->ID, 'spec_technical_features_list', true)
 								 ): ?>
 								 	<div class="row <?php echo get_post_field('row_class'); ?>">
 										<div class="column size_50">
 											<div class="spec-img technical-features">
-												<img src="<?php echo get_post_field('spec_technical_features_img'); ?>" />	
+												<img src="<?php echo get_post_field('spec_technical_features_img'); ?>" />
 											</div>
 											<div class="spec-title">
 												<?php echo get_post_field('spec_technical_features_title'); ?>
 											</div>
 											<div class="spec-list">
-												<?php echo get_post_field('spec_technical_features_list'); ?>	
+												<?php echo get_post_field('spec_technical_features_list'); ?>
 											</div>
 										</div>
 								<?php endif; ?>
 
-								<?php if(get_post_meta($post->ID, 'spec_safety_img', true) || 
-								 get_post_meta($post->ID, 'spec_safety_title', true) || 
+								<?php if(get_post_meta($post->ID, 'spec_safety_img', true) ||
+								 get_post_meta($post->ID, 'spec_safety_title', true) ||
 								 get_post_meta($post->ID, 'spec_safety_list', true)
 								 ): ?>
 										<div class="column size_50">
 											<div class="spec-img safety">
-												<img src="<?php echo get_post_field('spec_safety_img'); ?>" />	
+												<img src="<?php echo get_post_field('spec_safety_img'); ?>" />
 											</div>
 											<div class="spec-title">
 												<?php echo get_post_field('spec_safety_title'); ?>
 											</div>
 											<div class="spec-list">
-												<?php echo get_post_field('spec_safety_list'); ?>	
+												<?php echo get_post_field('spec_safety_list'); ?>
 											</div>
 										</div>
 									</div>
 								<?php endif; ?>
-							
-								<?php if(get_post_meta($post->ID, 'spec_service_img', true) || 
-								 get_post_meta($post->ID, 'spec_service_title', true) || 
+
+								<?php if(get_post_meta($post->ID, 'spec_service_img', true) ||
+								 get_post_meta($post->ID, 'spec_service_title', true) ||
 								 get_post_meta($post->ID, 'spec_service_list', true)
 								 ): ?>
 								 	<div class="row <?php echo get_post_field('row_class'); ?>">
 										<div class="column size_50">
 											<div class="spec-img service">
-												<img src="<?php echo get_post_field('spec_service_img'); ?>" />	
+												<img src="<?php echo get_post_field('spec_service_img'); ?>" />
 											</div>
 											<div class="spec-title">
 												<?php echo get_post_field('spec_service_title'); ?>
 											</div>
 											<div class="spec-list">
-												<?php echo get_post_field('spec_service_list'); ?>	
+												<?php echo get_post_field('spec_service_list'); ?>
 											</div>
 										</div>
 								<?php endif; ?>
 
-								<?php if(get_post_meta($post->ID, 'spec_customization_img', true) || 
-								 get_post_meta($post->ID, 'spec_customization_title', true) || 
+								<?php if(get_post_meta($post->ID, 'spec_customization_img', true) ||
+								 get_post_meta($post->ID, 'spec_customization_title', true) ||
 								 get_post_meta($post->ID, 'spec_customization_list', true)
 								 ): ?>
 										<div class="column size_50">
 											<div class="spec-img customization">
-												<img src="<?php echo get_post_field('spec_customization_img'); ?>" />	
+												<img src="<?php echo get_post_field('spec_customization_img'); ?>" />
 											</div>
 											<div class="spec-title">
 												<?php echo get_post_field('spec_customization_title'); ?>
 											</div>
 											<div class="spec-list">
-												<?php echo get_post_field('spec_customization_list'); ?>	
+												<?php echo get_post_field('spec_customization_list'); ?>
 											</div>
 										</div>
 									</div>
 								<?php endif; ?>
 
 
-								
+
 								<!-- In case of PRICES section -->
 
 								<!-- <div class="row margin-top-2"> -->
@@ -129,13 +120,13 @@ get_header() ?>
 													<h2 class="heading">
 														<?php echo get_post_field('price_column1_title'); ?>
 													</h2>
-												</div>	
+												</div>
 												<div class="price-body">
 													<div class="price-features-list"><?php echo get_post_field('price_column1_list'); ?></div>
 													<div class="price-amount">
-														<?php echo get_post_field('price_column1_price'); ?>	
+														<?php echo get_post_field('price_column1_price'); ?>
 													</div>
-														<div class="price-period"><?php echo get_post_field('price_column1_periodically'); ?>	
+														<div class="price-period"><?php echo get_post_field('price_column1_periodically'); ?>
 													</div>
 												</div>
 												<div class="price-footer">
@@ -156,13 +147,13 @@ get_header() ?>
 													<h2 class="heading">
 														<?php echo get_post_field('price_column2_title'); ?>
 													</h2>
-												</div>	
+												</div>
 												<div class="price-body">
 													<div class="price-features-list"><?php echo get_post_field('price_column2_list'); ?></div>
 													<div class="price-amount">
-														<?php echo get_post_field('price_column2_price'); ?>	
+														<?php echo get_post_field('price_column2_price'); ?>
 													</div>
-														<div class="price-period"><?php echo get_post_field('price_column2_periodically'); ?>	
+														<div class="price-period"><?php echo get_post_field('price_column2_periodically'); ?>
 													</div>
 												</div>
 												<div class="price-footer">
@@ -183,13 +174,13 @@ get_header() ?>
 													<h2 class="heading">
 														<?php echo get_post_field('price_column3_title'); ?>
 													</h2>
-												</div>	
+												</div>
 												<div class="price-body">
 													<div class="price-features-list"><?php echo get_post_field('price_column3_list'); ?></div>
 													<div class="price-amount">
-														<?php echo get_post_field('price_column3_price'); ?>	
+														<?php echo get_post_field('price_column3_price'); ?>
 													</div>
-														<div class="price-period"><?php echo get_post_field('price_column3_periodically'); ?>	
+														<div class="price-period"><?php echo get_post_field('price_column3_periodically'); ?>
 													</div>
 												</div>
 												<div class="price-footer">
@@ -203,16 +194,16 @@ get_header() ?>
 
 								</div>
 
-							</article>	
+							</article>
 						</div>
 					</div>
 				</div>
 
-			<?php endif ?>	
+			<?php endif ?>
 
 			<!-- if GET IN TOUCH SECTION -->
 			<?php if ( get_post_meta($post->ID, 'section_without_title', true) || get_post_meta($post->ID, 'section_without_title_button_target', true) || get_post_meta($post->ID, 'section_without_title_button_color', true) || get_post_meta($post->ID, 'section_without_title_button_color', true) ) : ?>
-			
+
 			<div class="<?php echo get_post_field('row_bg_color'); ?>">
 				<div class="row <?php echo get_post_field('row_class'); ?>">
 					<div class="column size_100">
@@ -233,20 +224,20 @@ get_header() ?>
 
 						</article>
 					</div>
-				</div>	
-			</div>	
+				</div>
+			</div>
 
 			<?php endif; ?>
 
-			
+
 
 		<?php endwhile ?>
-	
-	
-	<?php else : ?>	
+
+
+	<?php else : ?>
 
 		<?php _e('no sections :(', 'sections') ?>
-		
+
 	<?php endif ?>
 
 <?php get_footer() ?>
