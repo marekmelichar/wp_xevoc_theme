@@ -445,7 +445,7 @@ article img {
 }
 
 .price-features-list {
-  ont-family: 'robotolight',sans-serif;
+  font-family: 'robotolight',sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -508,10 +508,20 @@ footer {
   text-align: center;
 }
 
+.footer-logo {
+  border-right: 1px solid #fff;
+  padding-right: 30px;
+}
+
 .footer-logo img {
-  max-width: 190px;
+  max-width: 90px;
   width: 100%;
   height: auto;
+}
+
+.footer-copyright {
+  font-family: 'robotolight',sans-serif;
+  padding: 20px 0 0 20px;
 }
 
 footer h2 {
@@ -660,16 +670,18 @@ footer h2 {
     content: "";
 }
 .myinput[type="checkbox"]:checked:after{
+  display: inline-block; font-family: "Ionicons"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; text-rendering: auto; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
   color: #7CB518;
-  content: "\2713";
-  transform: scale(3);
+  content: "\f3fd";
+  transform: scale(2.5);
+  margin-top: -14px;
 }
 
-.myinput[type="checkbox"]:not(:disabled):checked:hover:after{
+/*.myinput[type="checkbox"]:not(:disabled):checked:hover:after{
   color: #7CB518;
   content: "\2713";
   transform: scale(3);
-}
+}*/
 
 .myinput[type="checkbox"]:disabled:after{
     background-color: #cfcfcf;
@@ -693,6 +705,10 @@ footer h2 {
   border-left: none;
   border-right: none;
   border-bottom: 1px solid #868686;
+  font-family: 'robotobold',sans-serif;
+  font-size: 1em;
+  text-align: center;
+  color: #868686;
 }
 
 .any-questions form textarea {
@@ -712,6 +728,8 @@ footer h2 {
   border: 1px solid #7cb518;
   margin: 2em auto 0 auto;
   text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'robotolight',sans-serif;
 }
 
 
