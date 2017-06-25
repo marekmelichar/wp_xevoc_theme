@@ -1,4 +1,4 @@
-PLUGINS : 
+PLUGINS :
 
 Post Types Order
 tinyPNG - vyzaduje API KEY
@@ -13,12 +13,18 @@ Smooth scroll =>
 
 Add new Section =>
 	1. Go to Sections in Dashboard
-	2. Add new section	
+	2. Add new section
 
 Add custom class for background color =>
-	1. Sections / some section / Custom fields / Name : row_bg_color , Values : [ gray-bg, blue-bg, green-bg, padding-2em ]
+	1. Sections / some section / Custom fields / Name : wrapper_class , Values : [ gray-bg, blue-bg, green-bg, padding-2em ] or you can set [ border-bottom-gray ]
 
+Section can be without title:
+	1. Custom Fields of any section :
+		1.1. section_without_title
+		1.2. section_without_title_button_color
+		1.3. section_without_title_button_target
+		1.4. section_without_title_button_text
 
 Editor webu:
 guest
-Xevoc@Editor%2017	
+Xevoc@Editor%2017

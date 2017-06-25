@@ -10,6 +10,12 @@ Version: 1.0
 /* roboto na maly */
 /* raleway na velky */
 
+/*
+*** MAIN GRAY : color: #868686;
+*/
+/*
+*** MAIN GREEN : color: #7cb518;
+*/
 
 /*
 ********* ROBOTO
@@ -138,6 +144,7 @@ Version: 1.0
 
 
 body {
+  color: #868686;
   -webkit-tap-highlight-color: transparent;
   font-family: 'robotoregular', sans-serif;
   font-weight: normal;
@@ -168,7 +175,7 @@ h1 {
   margin: 0;
   padding: 0;
   text-align: justify;
-  padding-top: 18px;
+  padding-top: 13px;
   margin-bottom: -15px;
 }
 
@@ -193,10 +200,30 @@ h1 {
 
 .main-menu ul li a {
     /*font-family: 'open_sansregular',sans-serif;*/
-    color: #3d3d3d;
+    color: #868686;
     display: inline-block;
     text-decoration: none;
     letter-spacing: .05em;
+    padding: 0 24px 5px 24px;
+    border-right: 1px solid #868686;
+}
+
+.main-menu ul li:last-child a {
+  border: none;
+}
+
+.green-dot:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #7cb518;
 }
 
 header {
@@ -207,6 +234,7 @@ header {
   -webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
   -moz-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
   box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+  padding: 0.6em 0;
 }
 
 header.fixed {
@@ -268,8 +296,17 @@ header.fixed {
   display: none;
 }
 
+.icon-after-banner {
+  color: #7cb518;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  font-size: 100px;
+}
+
 article {
-  padding: 6em 0;
+  padding: 2em 0 4em 0;
   font-family: 'robotolight',sans-serif;
   font-size: 1em;
   letter-spacing: 0.02em;
@@ -278,15 +315,36 @@ article {
 }
 
 article h1 {
+  color: #868686;
   text-align: center;
-  font-family: 'ralewayregular',sans-serif;
-  font-size: 55px;
+  font-family: 'ralewaybold',sans-serif;
+  font-size: 50px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+}
+
+article h1:after {
+  content: '';
+  display: block;
+  height: 3px;
+  background-color: #7cb518;
+  width: 200px;
+  margin: 0 auto;
+}
+
+article h2 {
+  color: #868686;
+  text-align: center;
+  font-family: 'ralewaybold',sans-serif;
+  font-size: 30px;
   letter-spacing: 0.02em;
   line-height: 1.5;
   margin-bottom: 0.5em;
 }
 
 article p {
+  color: #868686;
   max-width: 700px;
   width: 100%;
   text-align: center;
@@ -301,33 +359,72 @@ article img {
   height: auto;
 }
 
+.feature-of-xevoq h1 {
+  font-size: 30px;
+}
+
+.feature-of-xevoq h1:after {
+  display: none;
+}
+
+.gray-bg h1 {
+  font-family: 'ralewaylight',sans-serif;
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.gray-bg h1:after {
+  display: none;
+}
+
+.gray-bg article {
+  padding: 2em 0;
+}
+
 .spec-img {
-  width: 20%;
-  float: left;
+  width: 100%;
+  max-width: 50px;
+  margin: 0 auto;
 }
 
 .spec-title,
 .spec-list {
-  width: 80%;
-  float: left;
-  text-align: left;
-  padding-left: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 .spec-title {
-  margin-top: 30px;
+  font-family: 'ralewaybold',sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 .spec-list {
   margin-top: 15px;
 }
 
-.safety {
-  padding-left: 30px;
+#prices {
+  padding-bottom: 0;
 }
 
-.customization {
-  padding-left: 30px;
+#prices .row {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#prices .column {
+  border-right: 1px solid #7cb518;
+  margin-bottom: 50px;
+}
+
+#prices .column:last-child {
+  border-right: none;
+}
+
+#prices p {
+  font-size: 26px;
+  margin-bottom: 10px;
 }
 
 .price-box {
@@ -338,41 +435,48 @@ article img {
 
 .price-box .heading {
   font-family: 'ralewaybold',sans-serif;
-  background-color: #153242;
-  color: #fff;
+  color: #868686;
   padding: 20px;
-  font-size: 1.75em;
+  font-size: 30px;
 }
 
 .price-body {
-  background-color: #EBEBEB;
-  text-align: left;
+  text-align: center;
 }
 
 .price-features-list {
-  padding: 30px;
-  line-height: 2;
+  ont-family: 'robotolight',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .price-amount {
+  color: #7cb518;
+  margin: 30px 0 0 0;
   text-align: center;
-  font-family: 'open_sansbold',sans-serif;
+  font-family: 'ralewaybold',sans-serif;
   font-size: 2.5em;
 }
 
 .price-period {
   text-align: center;
-  font-family: 'ralewaybold',sans-serif;
+  font-family: 'ralewaylight',sans-serif;
   font-size: 1.25em;
 }
 
 .price-button {
+  background-color: #7cb518;
   text-align: center;
   width: 100%;
   display: block;
-  padding: 25px;
-  font-size: 1.5em;
+  padding-top: 41px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  font-size: 28px;
+  line-height: 1.25;
   text-decoration: none;
+  margin: 0 auto;
 }
 
 .price-button:hover {
@@ -380,8 +484,7 @@ article img {
 }
 
 .price-footer {
-  background-color: #EBEBEB;
-  padding: 20px;
+  padding: 20px 0 60px 0;
 }
 
 .get-in-touch-body {
@@ -419,16 +522,10 @@ footer h2 {
   padding: 4em 0;
 }
 
-#prices {
-  padding-bottom: 0;
-}
-
-#prices .row {
-  width: 80%;
-  margin: 0 auto;
-}
-
-#contact {
+/*
+*****------------------------------------- CUSTOM RADIO BUTTONS
+*/
+/*#contact {
   padding: 3em 0;
 }
 
@@ -526,7 +623,98 @@ footer h2 {
   margin: 2em 0.5em 1em;
   padding: 0.2em 1em;
   font-size: 13px;
+}*/
+
+
+/*
+------------------------------------------ CUSTOM CHECKBOX
+*/
+
+/* Main Classes */
+
+.myinput {
+  line-height: 2.75;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: -30px;
 }
+
+.myinput[type="checkbox"]:before{
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #808080;
+    content: "";
+    background: #FFF;
+}
+.myinput[type="checkbox"]:after{
+    position: relative;
+    display: block;
+    left: 1px;
+    top: -31px;
+    width: 30px;
+    height: 30px;
+    border-width: 1px;
+    border-color: #B3B3B3;
+    content: "";
+}
+.myinput[type="checkbox"]:checked:after{
+  color: #7CB518;
+  content: "\2713";
+  transform: scale(3);
+}
+
+.myinput[type="checkbox"]:not(:disabled):checked:hover:after{
+  color: #7CB518;
+  content: "\2713";
+  transform: scale(3);
+}
+
+.myinput[type="checkbox"]:disabled:after{
+    background-color: #cfcfcf;
+}
+
+.myinput[type="checkbox"]:not(:disabled):hover:after{
+    border-color: #7CB518;
+}
+
+.myinput[type="checkbox"]:not(:disabled):hover:before{
+    border-color: #7CB518;
+}
+
+.any-questions h1 {
+  margin-bottom: 1.5em;
+}
+
+.any-questions form input,
+.any-questions form textarea {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #868686;
+}
+
+.any-questions form textarea {
+  margin-top: 50px;
+}
+
+.any-questions input[type="submit"] {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #7cb518;
+  box-shadow: none;
+  text-shadow: none;
+  border-bottom: none;
+  font-size: 30px;
+  border: 1px solid #7cb518;
+  margin: 2em auto 0 auto;
+  text-transform: uppercase;
+}
+
+
 
 #thank-you img {
   float: right;
@@ -580,7 +768,8 @@ footer h2 {
 
 
 .gray-bg {
-  background-color: #F4F5F7;
+  background-color: #666666;
+  color: #fff;
 }
 
 .blue-bg {
@@ -589,7 +778,7 @@ footer h2 {
 }
 
 .green-bg {
-	background-color: #7CB518;
+	background-color: #7cb518;
   color: #fff;
 }
 
@@ -611,7 +800,9 @@ a.green-bg:hover,
   color: red;
 }
 
-
+.border-bottom-gray {
+  border-bottom: 1px solid #868686;
+}
 
 
 

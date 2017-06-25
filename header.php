@@ -17,12 +17,12 @@
 	<main>
 				<header>
 					<div class="row">
-						<div class="column size_33 logo-wrap">
+						<div class="column size_50 logo-wrap">
 							<a class="logo" href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo $image[0] ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
 							</a>
 						</div>
-						<div class="column size_33"></div>
-						<div class="column size_33 main-menu">
+						<!-- <div class="column size_33"></div> -->
+						<nav class="column size_50 main-menu">
 
 							<?php wp_nav_menu( array(
 									'theme_location'  => 'primary',
@@ -30,6 +30,6 @@
 									'container'       => false
 								) ) ?>
 
-						</div>
+						</nav>
 					</div>
 				</header>

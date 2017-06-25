@@ -8,7 +8,7 @@ get_header() ?>
 			<?php if (get_post_type( get_the_ID() ) == 'banner' ) : ?>
 
 				<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-					<div class="banner" style="background-image: url('<?php echo $thumb[0]; ?>')">
+					<div id="home" class="banner" style="background-image: url('<?php echo $thumb[0]; ?>')">
 						<div class="row <?php echo get_post_field('row_class'); ?>">
 							<div class="column size_100">
 								<article>
@@ -18,11 +18,16 @@ get_header() ?>
 							</div>
 						</div>
 					</div>
+					<div class="row">
+						<div class="column size_100">
+							<i class="icon-after-banner ion-ios-arrow-down"></i>
+						</div>
+					</div>
 
 			<?php endif; ?>
 
 			<?php if (get_post_type( get_the_ID() ) == 'section' && !get_post_meta($post->ID, 'section_without_title', true) ) : ?>
-				<div class="<?php echo get_post_field('row_bg_color'); ?>">
+				<div class="<?php echo get_post_field('wrapper_class'); ?>">
 					<div class="row <?php echo get_post_field('row_class'); ?>">
 						<div class="column size_100">
 							<article id="<?php echo get_post_field('smooth_scroll_id'); ?>">
@@ -204,7 +209,7 @@ get_header() ?>
 			<!-- if GET IN TOUCH SECTION -->
 			<?php if ( get_post_meta($post->ID, 'section_without_title', true) || get_post_meta($post->ID, 'section_without_title_button_target', true) || get_post_meta($post->ID, 'section_without_title_button_color', true) || get_post_meta($post->ID, 'section_without_title_button_color', true) ) : ?>
 
-			<div class="<?php echo get_post_field('row_bg_color'); ?>">
+			<div class="<?php echo get_post_field('wrapper_class'); ?>">
 				<div class="row <?php echo get_post_field('row_class'); ?>">
 					<div class="column size_100">
 						<article id="<?php echo get_post_field('smooth_scroll_id'); ?>">
