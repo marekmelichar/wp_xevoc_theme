@@ -25,6 +25,8 @@ function default_theme_scripts()
 
 	wp_enqueue_script( 'equal-height-js', get_template_directory_uri() . '/js/equal-height.js', array( 'jquery' ), '', true );
 
+	wp_enqueue_script( 'mail-js', get_template_directory_uri() . '/js/mail.js', array( 'jquery' ), '', true );
+
 	// wp_enqueue_script( 'slideshow-js', get_template_directory_uri() . '/js/slideshow.js', array( 'jquery' ), '', true );
 
 	wp_enqueue_style(
