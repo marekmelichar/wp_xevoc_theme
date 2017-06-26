@@ -28,3 +28,15 @@ Section can be without title:
 Editor webu:
 guest
 Xevoc@Editor%2017
+
+
+
+//////////////// XEVOQ DEMO ////////////////////////
+
+to add texts to each slide of demo :
+
+Media => assigned image to post => EDIT => Description
+
+The IMAGE should be named as "demo_1" etc.
+
+When uploading and attaching the pictures inside the frame => do it one by one, Media / Add new / Attach and repeat
