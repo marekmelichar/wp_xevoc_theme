@@ -29,9 +29,9 @@ function default_theme_scripts()
 
 	// wp_enqueue_script( 'slideshow-js', get_template_directory_uri() . '/js/slideshow.js', array( 'jquery' ), '', true );
 
-	wp_enqueue_style(
-		'default-animations', get_template_directory_uri() . '/css/animate.css'
-	);
+	// wp_enqueue_style(
+	// 	'default-animations', get_template_directory_uri() . '/css/animate.css'
+	// );
 
 	wp_enqueue_style(
 		'animate-library', get_template_directory_uri() . '/css/animate.css'
@@ -59,9 +59,9 @@ function default_theme_scripts()
 	// 	'slider', get_template_directory_uri() . '/css/slider.css'
 	// );
 
-	// wp_enqueue_style(
-	// 	'navigation', get_template_directory_uri() . '/css/nav.css'
-	// );
+	wp_enqueue_style(
+		'mobile-nav', get_template_directory_uri() . '/css/mobile-nav.css'
+	);
 
 
 

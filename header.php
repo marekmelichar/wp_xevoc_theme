@@ -22,14 +22,35 @@
 							</a>
 						</div>
 						<!-- <div class="column size_33"></div> -->
-						<nav class="column size_50 main-menu">
-
-							<?php wp_nav_menu( array(
-									'theme_location'  => 'primary',
-									'menu_class'      => 'primary-menu-list',
-									'container'       => false
-								) ) ?>
-
-						</nav>
+						<div class="column size_50 main-menu">
+							<input type="checkbox" id="menu-state" class="menu-state">
+							<nav id="mobile-nav">
+							  <div class="mobile-nav-content">
+							    <ul class="mobile-nav-content-header">
+							      <li class="mobile-nav-content-header-item menu-icon">
+							        <label class="menu-icon-label" for="menu-state" aria-hidden="true">
+							          <span class="hamburger hamburger-top">
+							            <span class="hamburger-itself hamburger-itself-top"></span>
+							          </span>
+							          <span class="hamburger hamburger-bottom">
+							            <span class="hamburger-itself hamburger-itself-bottom"></span>
+							          </span>
+							        </label>
+							        <a href="#" class="menu-anchor menu-anchor-open" id="menu-anchor-open">
+							          <span class="menu-anchor-label">Open Menu</span>
+							        </a>
+							        <a href="#" class="menu-anchor menu-anchor-close" id="menu-anchor-close">
+												<span class="menu-anchor-label">Close Menu</span>
+											</a>
+							      </li>
+							    </ul>
+									<?php wp_nav_menu( array(
+			 							'theme_location'  => 'primary',
+			 							'menu_class'      => 'primary-menu-list',
+			 							'container'       => false
+			 						) ) ?>
+							  </div>
+							</nav>
+						</div>
 					</div>
 				</header>

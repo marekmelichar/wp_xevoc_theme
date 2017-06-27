@@ -908,14 +908,34 @@ a.green-bg:hover,
     top: 44px;
   }
 
-
-
   .main-menu {
     width: 50%;
   }
 
+  .main-menu ul {
+    padding-top: 0;
+  }
 
+  .main-menu ul li a {
+    border: none;
+  }
 
+  .icon-after-banner {
+    color: #7cb518;
+    top: -150px;
+    left: 44%;
+    transform: translateX(-50%);
+    position: relative;
+    font-size: 80px;
+  }
+
+  .row.demo_of_app {
+    margin-top: -200px;
+  }
+
+  .price-box .heading {
+    font-size: 20px;
+  }
 
 }
 
@@ -930,6 +950,11 @@ a.green-bg:hover,
     width: 55%;
     float: right;
     margin-top: 22px;
+    padding-top: 0;
+  }
+
+  .main-menu ul li a {
+    border: none;
   }
 
   .customize-support header.fixed {
@@ -940,11 +965,37 @@ a.green-bg:hover,
     max-width: 125px;
   }
 
+  .icon-after-banner {
+    color: #7cb518;
+    top: -150px;
+    left: 44%;
+    transform: translateX(-50%);
+    position: relative;
+    font-size: 80px;
+  }
+
+  .row.demo_of_app {
+    margin-top: -200px;
+  }
+
+  article h1 {
+    font-size: 30px;
+  }
+
+  article h2 {
+    font-size: 20px;
+  }
+
+  article p {
+    font-size: 16px;
+  }
+
   .spec-title, .spec-list {
     width: 100%;
     float: left;
     text-align: center;
     padding-left: 10px;
+    font-size: 16px;
   }
 
   .spec-img {
@@ -954,7 +1005,7 @@ a.green-bg:hover,
   }
 
   .spec-title {
-    font-size: 2em;
+    font-size: 24px;
   }
 
   .price-box {
@@ -967,6 +1018,18 @@ a.green-bg:hover,
 
   #calculator {
     width: 100%;
+  }
+
+  #prices .column,
+  #prices .column:last-child {
+    border: 1px solid #7cb518;
+    margin-bottom: 50px;
+  }
+
+  .footer-logo {
+    border-right: none;
+    text-align: center;
+    padding-right: 0;
   }
 }
 
@@ -989,6 +1052,22 @@ a.green-bg:hover,
     float: none;
     margin: 0 auto;
     padding: 0;
+  }
+
+  .recharts-surface, .recharts-default-legend {
+    max-width: 320px;
+    width: 100%;
+  }
+
+  .any-questions form textarea {
+    max-width: 320px;
+  }
+
+  .footer-copyright {
+    padding: 0;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
   }
 }
 
