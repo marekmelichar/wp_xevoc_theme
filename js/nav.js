@@ -76,7 +76,7 @@ $(function() {
 	 * We use the scroll functionality again, some array creation and
 	 * manipulation, class adding and class removing, and conditional testing
 	 */
-	var aChildren = $("nav li").children(); // find the a children of the list items
+	var aChildren = $("#menu-main-menu li").children(); // find the a children of the list items
 	var aArray = []; // create the empty aArray
 	for (var i=0; i < aChildren.length; i++) {
 	    var aChild = aChildren[i];
@@ -101,10 +101,10 @@ $(function() {
 	    }
 
 	    if(windowPos + windowHeight == docHeight) {
-	        if (!$("nav li:last-child a").hasClass("green-dot")) {
+	        if (!$("#menu-main-menu li:last-child a").hasClass("green-dot")) {
 	            var navActiveCurrent = $(".green-dot").attr("href");
 	            $("a[href='" + navActiveCurrent + "']").removeClass("green-dot");
-	            $("nav li:last-child a").addClass("green-dot");
+	            $("#menu-main-menu li:last-child a").addClass("green-dot");
 	        }
 	    }
 	});

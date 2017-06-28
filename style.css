@@ -170,7 +170,7 @@ h1 {
   width: 100%;
 }
 
-.main-menu ul {
+/*.main-menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -185,45 +185,30 @@ h1 {
   display: inline-block;
   font-size: 0;
   line-height: 0;
-}
+}*/
 
-.main-menu ul li {
+/*.main-menu ul li {
   display: inline-block;
   position: relative;
   z-index: 1;
   vertical-align: top;
+}*/
 
-  /* work around when using Autoptimize plugin */
-  /*width: 33%;*/
-  /*text-align: center;*/
-}
-
-.main-menu ul li a {
-    /*font-family: 'open_sansregular',sans-serif;*/
+/*.main-menu ul li a {
     color: #868686;
     display: inline-block;
     text-decoration: none;
     letter-spacing: .05em;
     padding: 0 17px 0 7px;
     border-right: 1px solid #868686;
-}
+}*/
 
-.main-menu ul li:last-child a {
+/*.main-menu ul li:last-child a {
   border: none;
-}
+}*/
 
-.green-dot:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #7cb518;
+nav ul {
+  list-style-type: none;
 }
 
 header {
@@ -656,7 +641,7 @@ footer h2 {
 
 #calculator {
   width: 100%;
-  float: left;
+  /*float: left;*/
   /*padding: 0 0 0 50px;*/
 }
 
@@ -691,6 +676,7 @@ footer h2 {
   color: #fff;
   margin-top: -100px;
   padding-top: 100px;
+  width: 100%;
 }
 
 #contact h2 {
