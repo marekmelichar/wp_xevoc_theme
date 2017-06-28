@@ -15,7 +15,7 @@
 		}
 
 		// apply matching height to nav wrapper div to avoid awkward content jumps
-		$(".nav-placeholder").height($("header").outerHeight());
+		$("header").height($("header").outerHeight());
 
 	} // end stickyUtility function
 
@@ -69,7 +69,7 @@ $(function() {
 
 
 
-// ------------------------- SMOOTH SCROLL UP ON LOGO CLICK ---------------------------------
+// ------------------------- SMOOTH SCROLL ---------------------------------
 
 	/**
 	 * This part handles the highlighting functionality.
@@ -132,6 +132,13 @@ $(function() {
  });
 
 
+
+ // ------------------------- WHEN CLICK ON ANCHOR, CLOSE MOBILE MENU ---------------------------------
+
+// $('#mobile-menu ul li a').on('click', function() {
+//
+// 	$('.menu-icon-label').click()
+// })
 
 
 })(jQuery);
