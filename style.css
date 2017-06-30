@@ -1170,9 +1170,14 @@ a.green-bg:hover,
   }
 
   .footer-logo {
-    border-right: none;
-    text-align: center;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
     padding-right: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-left: none;
+    border-right: none;
+    margin-top: 20px;
   }
 
   #calculator .logo img {
