@@ -1,5 +1,9 @@
 (function($) {
 
+	// $('.thank-you-content a').on('click', function() {
+	// 	return localStorage.removeItem('amountOfMeetingRooms');
+	// })
+
 	// define variables
 	var navOffset,
     	scrollPos = 0;
@@ -15,7 +19,7 @@
 		}
 
 		// apply matching height to nav wrapper div to avoid awkward content jumps
-		$("header").height($("header").outerHeight());
+		$(".nav-placeholder").height($("header").outerHeight());
 
 	} // end stickyUtility function
 
@@ -56,9 +60,14 @@ $(function() {
           scrollTop: target.offset().top - $("header").outerHeight()
         }, 1000);
 
+        // close the mobile nav
+        if ($(window).width() < 769) {
+   				$('.menu-icon-label').trigger('click')
+				}
+
 				if (target.selector.replace(/#/g, "") === target[0].id) {
 					$(`a[href=${target.selector}]`).addClass('green-dot')
-					$(`a[href*=#]:not([href=${target.selector}])`).removeClass('green-dot')
+					// $(`a[href*=#]:not([href=${target.selector}])`).removeClass('green-dot')
 				}
 
         return false;
@@ -69,7 +78,7 @@ $(function() {
 
 
 
-// ------------------------- SMOOTH SCROLL ---------------------------------
+// ------------------------- GREEN DOT ---------------------------------
 
 	/**
 	 * This part handles the highlighting functionality.
@@ -93,20 +102,21 @@ $(function() {
 	        var theID = aArray[i];
 	        var divPos = $(theID).offset().top; // get the offset of the div from the top of page
 	        var divHeight = $(theID).height(); // get the height of the div in question
-	        if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+	        // console.log(theID, Math.floor(windowPos), Math.floor(divPos - $("header").outerHeight()))
+	        if (Math.floor(windowPos) === Math.floor(divPos - $("header").outerHeight()) || windowPos >= divPos && windowPos < (divPos + divHeight)) {
 	            $("a[href='" + theID + "']").addClass("green-dot");
 	        } else {
 	            $("a[href='" + theID + "']").removeClass("green-dot");
 	        }
 	    }
 
-	    if(windowPos + windowHeight == docHeight) {
-	        if (!$("#menu-main-menu li:last-child a").hasClass("green-dot")) {
-	            var navActiveCurrent = $(".green-dot").attr("href");
-	            $("a[href='" + navActiveCurrent + "']").removeClass("green-dot");
-	            $("#menu-main-menu li:last-child a").addClass("green-dot");
-	        }
-	    }
+	    // if(windowPos + windowHeight == docHeight) {
+	    //     if (!$("#menu-main-menu li:last-child a").hasClass("green-dot")) {
+	    //         var navActiveCurrent = $(".green-dot").attr("href");
+	    //         $("a[href='" + navActiveCurrent + "']").removeClass("green-dot");
+	    //         $("#menu-main-menu li:last-child a").addClass("green-dot");
+	    //     }
+	    // }
 	});
 
 
@@ -117,12 +127,7 @@ $(function() {
 
 // ------------------------- SMOOTH SCROLL UP ON LOGO CLICK ---------------------------------
 
-	// var logo = $('.logo');
-	//
-	// logo.on('click', function(event) {
-	// 	event.preventDefault();
-	// 	$('html,body').animate({ scrollTop: 0 });
- // 	});
+
 
  var home = $('a[href="/"]');
 
@@ -133,12 +138,82 @@ $(function() {
 
 
 
- // ------------------------- WHEN CLICK ON ANCHOR, CLOSE MOBILE MENU ---------------------------------
 
-// $('#mobile-menu ul li a').on('click', function() {
-//
-// 	$('.menu-icon-label').click()
-// })
+
+
+// ------------------------- SAVE THE VALUE OF AMOUNT OF MEETING ROOMS ---------------------------------
+
+	var btn = $('.price-button')
+	var meetingRooms = $('#_amount-of-meetings-daily')
+
+	// on page init
+	// localStorage.setItem('amountOfMeetingRooms', JSON.stringify(meetingRooms.val()));
+
+	btn.on('click', function() {
+		localStorage.setItem('amountOfMeetingRooms', JSON.stringify(meetingRooms.val()));
+	})
+
+	meetingRooms.on('change', function() {
+		localStorage.setItem('amountOfMeetingRooms', JSON.stringify(meetingRooms.val()));
+	})
+
+	var contactInput = $('#contact #rooms-amount')
+	var valueFromLocalStorage = localStorage.getItem('amountOfMeetingRooms')
+
+	if (contactInput) {
+		contactInput.val(JSON.parse(valueFromLocalStorage))
+	}
+
+
+
+
+
+// ------------------------- SAVE THE VALUE OF CHOSEN PACKAGE ---------------------------------
+
+	var priceBox1 = $('#price-box-1 .price-button')
+	var priceBox2 = $('#price-box-2 .price-button')
+	var priceBox3 = $('#price-box-3 .price-button')
+
+	var radioBTNFromLocalStorage = localStorage.getItem('radio-checked')
+
+	var radio1 = $('#contact .wpcf7-list-item:nth-child(1) label')
+	var radio2 = $('#contact .wpcf7-list-item:nth-child(2) label')
+	var radio3 = $('#contact .wpcf7-list-item:nth-child(3) label')
+
+	priceBox1.on('click', function() {
+		localStorage.setItem('radio-checked', JSON.stringify(1))
+	})
+
+	priceBox2.on('click', function() {
+		localStorage.setItem('radio-checked', JSON.stringify(2))
+	})
+
+	priceBox3.on('click', function() {
+		localStorage.setItem('radio-checked', JSON.stringify(3))
+	})
+
+	$(function() {
+		switch (radioBTNFromLocalStorage) {
+			case "1":
+				radio1.trigger('click')
+				break;
+			case "2":
+				radio2.trigger('click')
+				break;
+			case "3":
+				radio3.trigger('click')
+				break;
+			default:
+
+		}
+  });
+
+
+
+
+
+
+
 
 
 })(jQuery);

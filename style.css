@@ -258,6 +258,10 @@ header.fixed {
   right: 0;
 }
 
+header.fixed #mobile-nav ul li a {
+  margin-top: 7px;
+}
+
 .customize-support header {
   top: 32px;
 }
@@ -561,14 +565,22 @@ footer h2 {
 
 /* Main Classes */
 
-.myinput {
+/*.myinput,*/
+.custom-checkbox input[type="checkbox"] {
   line-height: 2.75;
   text-align: center;
   margin-top: 50px;
-  margin-left: -30px;
+  margin-left: 150px;
+  display: block;
 }
 
-.myinput[type="checkbox"]:before{
+.wpcf7-list-item-label {
+  display: block;
+  margin-top: 40px;
+}
+
+/*.myinput[type="checkbox"]:before,*/
+.custom-checkbox input[type="checkbox"]:before {
     position: relative;
     display: block;
     width: 30px;
@@ -577,7 +589,9 @@ footer h2 {
     content: "";
     background: #FFF;
 }
-.myinput[type="checkbox"]:after{
+
+/*.myinput[type="checkbox"]:after,*/
+.custom-checkbox input[type="checkbox"]:after {
     position: relative;
     display: block;
     left: 1px;
@@ -588,7 +602,9 @@ footer h2 {
     border-color: #B3B3B3;
     content: "";
 }
-.myinput[type="checkbox"]:checked:after{
+
+/*.myinput[type="checkbox"]:checked:after,*/
+.custom-checkbox input[type="checkbox"]:checked:after {
   display: inline-block; font-family: "Ionicons"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; text-rendering: auto; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
   color: #7CB518;
   content: "\f3fd";
@@ -596,21 +612,28 @@ footer h2 {
   margin-top: -14px;
 }
 
-.myinput[type="checkbox"]:disabled:after{
+/*.myinput[type="checkbox"]:disabled:after,*/
+.custom-checkbox input[type="checkbox"]:disabled:after {
     background-color: #cfcfcf;
 }
 
-.myinput[type="checkbox"]:not(:disabled):hover:after{
+/*.myinput[type="checkbox"]:not(:disabled):hover:after,*/
+.custom-checkbox input[type="checkbox"]:not(:disabled):hover:after {
     border-color: #7CB518;
 }
 
-.myinput[type="checkbox"]:not(:disabled):hover:before{
+/*.myinput[type="checkbox"]:not(:disabled):hover:before,*/
+.custom-checkbox input[type="checkbox"]:not(:disabled):hover:before {
     border-color: #7CB518;
 }
 
 .any-questions h1 {
   margin-bottom: 1.5em;
 }
+
+/*.custom-checkbox input[type="checkbox"]:after {
+
+}*/
 
 .any-questions form input,
 .any-questions form textarea {
@@ -626,14 +649,16 @@ footer h2 {
 
 .any-questions form textarea {
   margin-top: 50px;
+  line-height: 0.75;
 }
 
-.any-questions input[type="submit"] {
+.any-questions input[type="submit"],
+.any-questions button {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-color: #fff;
-  color: #7cb518;
+  background-color: #7cb518;
+  color: #fff;
   box-shadow: none;
   text-shadow: none;
   border-bottom: none;
@@ -645,9 +670,10 @@ footer h2 {
   font-family: 'robotolight',sans-serif;
 }
 
-.any-questions input[type="submit"]:hover {
-  background-color: #7cb518;
-  color: #fff;
+.any-questions input[type="submit"]:hover,
+.any-questions button:hover {
+  background-color: #fff;
+  color: #7cb518;
 }
 
 
@@ -677,6 +703,16 @@ footer h2 {
   /*float: left;*/
   /*padding: 0 0 0 50px;*/
 }
+
+#calculator-graph .column {
+  text-align: center;
+}
+
+#calculator-graph img {
+  max-width: 600px;
+  width: 100%;
+}
+
 
 
 
@@ -841,6 +877,7 @@ footer h2 {
   color: #fff;
   margin-top: -100px;
   padding: 100px 0;
+  width: 100%;
 }
 
 #thank-you p {
@@ -989,6 +1026,10 @@ a.green-bg:hover,
     font-size: 20px;
   }
 
+  .price-amount {
+    font-size: 30px;
+  }
+
 }
 
 
@@ -1077,6 +1118,10 @@ a.green-bg:hover,
     margin-top: 2em;
   }
 
+  .price-amount {
+    font-size: 30px;
+  }
+
   #demo {
     width: 100%;
   }
@@ -1095,6 +1140,14 @@ a.green-bg:hover,
     border-right: none;
     text-align: center;
     padding-right: 0;
+  }
+
+  #calculator .logo img {
+    max-width: 70%;
+  }
+
+  #calculator-graph img {
+    width: 90%;
   }
 }
 
@@ -1142,5 +1195,13 @@ a.green-bg:hover,
     float: none;
     margin: 0 auto;
     padding: 0;
+  }
+
+  .custom-checkbox input[type="checkbox"] {
+    margin-left: 114px;
+  }
+
+  .any-questions form input, .any-questions form textarea {
+    max-width: 280px;
   }
 }
