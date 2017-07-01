@@ -144,7 +144,7 @@ $(function() {
 // ------------------------- SAVE THE VALUE OF AMOUNT OF MEETING ROOMS ---------------------------------
 
 	var btn = $('.price-button')
-	var meetingRooms = $('#_amount-of-meetings-daily')
+	var meetingRooms = $('#_number-of-rooms')
 
 	// on page init
 	// localStorage.setItem('amountOfMeetingRooms', JSON.stringify(meetingRooms.val()));
