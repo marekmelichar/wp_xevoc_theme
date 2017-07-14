@@ -23,7 +23,8 @@ function custom_setup()
 	register_nav_menus(array(
 		'primary' => 'Primary Menu',
 		// 'categories' => 'Category Menu',
-		'footer' => 'Footer Menu'
+		'footer' => 'Footer Menu',
+		'howto' => 'How-To Menu'
 	));
 
 
